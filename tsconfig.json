@@ -1,0 +1,40 @@
+{
+  "compilerOptions": {
+    "strict": true,
+    "jsx": "react",
+    "strictNullChecks": true,
+    "allowSyntheticDefaultImports": true,
+    "noImplicitThis": true,
+    "noImplicitAny": true,
+    "incremental": true,
+    "outDir": "bulid/lib",
+    "target": "es5",
+    "module": "esnext",
+    "lib": ["dom", "esnext"],
+    "sourceMap": true,
+    "importHelpers": true,
+    "declaration": true,
+    "noUnusedLocals": true,
+    "noImplicitReturns": true,
+    "noFallthroughCasesInSwitch": true,
+    "allowJs": false,
+    "moduleResolution": "node",
+    "forceConsistentCasingInFileNames": true,
+    "esModuleInterop": true,
+    "suppressExcessPropertyErrors": true,
+    "experimentalDecorators": true,
+    "rootDir": "",
+    "baseUrl": "src",
+    "paths": {
+      "@components/*": ["web/components/*"],
+      "@atoms/*": ["web/recoil/atoms/*"],
+      "@selectors": ["web/recoil/selectors/*"]
+    }
+
+  },
+  "include": [
+     "src",
+    "tests"
+  ],
+  "exclude": ["node_modules", "build", "scripts"]
+}
