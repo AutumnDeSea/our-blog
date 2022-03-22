@@ -22,7 +22,7 @@
     "@storybook/addon-essentials": "^6.4.18",
     "@storybook/addon-links": "^6.4.18",
     "@storybook/react": "^6.4.18",
-    "@swc/core": "^1.2.135",
+    "@swc/core": "^1.2.159",
     "@testing-library/jest-dom": "^5.16.2",
     "@testing-library/react": "^12.1.2",
     "@types/jest": "^27.4.0",
@@ -42,7 +42,6 @@
     "majestic": "^1.8.1",
     "msw": "^0.36.8",
     "node-notifier": "^10.0.1",
-    "react-dom": "^17.0.2",
     "scripty": "^2.0.0",
     "swc-loader": "^0.1.15",
     "ts-jest": "^27.1.3",
@@ -58,6 +57,7 @@
   },
   "dependencies": {
     "@types/react": "^17.0.39",
-    "react": "^17.0.2"
+    "react": "^17.0.2",
+    "react-dom": "^17.0.2"
   }
 }

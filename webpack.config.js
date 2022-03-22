@@ -12,7 +12,7 @@ const webpackBaseConfig = {
     type: "filesystem"
   },
   entry: {
-    main: resolve('src/index.tsx')
+    main: resolve('src/web/index.tsx')
   },
   module: {
     rules: [
@@ -30,8 +30,8 @@ const webpackBaseConfig = {
       "@component": resolve("src/web/component"),
       "@atoms": resolve("src/web/atoms"),
       "@selectors": resolve("src/web/selectors")
-
-    }
+    },
+    extensions: [".js", ".ts", ".tsx", "jsx"],
   },
   plugins: [new Webpackbar()]
 }

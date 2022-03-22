@@ -1,7 +1,7 @@
-const { join, resolve } = require('path')
-const HtmlWebpackPlugin = require('html-webpack-plugin')
-const FriendlyErrorsWebpackPlugin = require("friendly-errors-webpack-plugin")
-const notifier = require('node-notifier')
+const { join, resolve } = require('path');
+const HtmlWebpackPlugin = require('html-webpack-plugin');
+const FriendlyErrorsWebpackPlugin = require('friendly-errors-webpack-plugin');
+const notifier = require('node-notifier');
 
 module.exports = {
   devServer: {
@@ -13,7 +13,7 @@ module.exports = {
       directory: join(__dirname, '../dist'),
     },
     hot: true,
-    port: 3000
+    port: 3000,
   },
   plugins: [
     // new BundleAnalayzerPlugin(),
@@ -27,28 +27,28 @@ module.exports = {
     //     suppressSuccess: true
     // }),
     new HtmlWebpackPlugin({
-        title: "kk-react-generator",
-        filename: "index.html",
-        template: resolve(__dirname, "../src/web/index.dev.html")
+      title: 'kk-react-generator',
+      filename: 'index.html',
+      template: resolve(__dirname, '../src/web/index.dev.html'),
     }),
     new FriendlyErrorsWebpackPlugin({
-       compilationSuccessInfo: {
-           messages: ["You application is running here"],
-           notes: ['💊构建信息请及时关注窗口右上角'],
-       },
-       onErrors: function(severity, errors) {
-            if(severity !== 'error') {
-                return
-            }
-            const error = errors[0]
-            notifier.notify({
-                title: "Webpack构建失败",
-                message: severity + ":" + error.name,
-                subtitle: error.file || '',
-                icon: 'https://boxcdn.zuoyebang.cc/v1/zyb-srmp/f08b9001/avatar.png'
-            })
-       }
-    })
-]
+      compilationSuccessInfo: {
+        messages: ['You application is running here'],
+        notes: ['💊构建信息请及时关注窗口右上角'],
+      },
+      onErrors: function (severity, errors) {
+        if (severity !== 'error') {
+          return;
+        }
+        const error = errors[0];
+        notifier.notify({
+          title: 'Webpack构建失败',
+          message: severity + ':' + error.name,
+          subtitle: error.file || '',
+          icon: 'https://boxcdn.zuoyebang.cc/v1/zyb-srmp/f08b9001/avatar.png',
+        });
+      },
+    }),
+  ],
   
-}
+};

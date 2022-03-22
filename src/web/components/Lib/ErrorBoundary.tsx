@@ -1,33 +1,35 @@
-import { Component, ReactElement, ReactNode } from "react";
+import { Component, ReactElement, ReactNode } from 'react';
 interface State {
   hasError: boolean
 }
 interface Props {
   children: ReactNode,
-  fallbackRender: ({error}: {error: Error | null})=> ReactElement
+  fallbackRender: ({ error }: { error: Error | null })=> ReactElement
 }
 class ErrorBoundary extends Component<Props, State> {
   constructor(props: Props) {
-    super(props)
+    super(props);
     this.state = {
-      hasError: false
-    }
+      hasError: false,
+    };
   }
+
   static getDerivedStateFromError(_: Error): State {
     // 更新state 使得下一次渲染都够显示降级后的UI
     return {
-      hasError: true
-    }
+      hasError: true,
+    };
   }
+
   render(): ReactNode {
-    const { children, fallbackRender } = this.props
-    const { hasError } = this.state
-    if(hasError) {
-      return fallbackRender({error: new Error('系统组件出错')})
+    const { children, fallbackRender } = this.props;
+    const { hasError } = this.state;
+    if (hasError) {
+      return fallbackRender({ error: new Error('系统组件出错') });
     }
-    return children
+    return children;
   }
 }
-export default ErrorBoundary
+export default ErrorBoundary;
 
 // tslib
