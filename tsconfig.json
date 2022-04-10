@@ -36,5 +36,5 @@
      "src",
     "tests"
   ],
-  "exclude": ["node_modules", "build", "scripts", "config"]
+  "exclude": ["node_modules", "build", "scripts", "config", "**/*.js"],
 }

@@ -22,12 +22,19 @@ const webpackBaseConfig = {
         use: {
           loader: "swc-loader"
         }
+      },
+      {
+        test: /\.css$/,
+        use: [
+          {loader: 'style-loader'},
+          {loader: "css-loader"}
+        ]
       }
     ]
   },
   resolve: {
     alias: {
-      "@component": resolve("src/web/component"),
+      "@components": resolve("src/web/components"),
       "@atoms": resolve("src/web/atoms"),
       "@selectors": resolve("src/web/selectors")
     },
