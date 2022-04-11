@@ -22,8 +22,8 @@ const headArr = [
 const HeaderBar = () => {
   const HeaderNodes = headArr.map(( item ) => {
     return (
-      <li>
-        <Link to={item.link}></Link>
+      <li key={item.link}>
+        <Link to={item.link}>{item.title}</Link>
       </li>
     );
   });

@@ -3,6 +3,7 @@
 const { resolve } =  require("path")
 const merge = require("webpack-merge")
 const argv = require("yargs-parser")(process.argv.slice(2))
+const MiniCssExtractPlugin = require('mini-css-extract-plugin');
 const _mode = argv.mode || "development"
 const _mergeConfig = require(`./config/webpack.${_mode}.js`)
 const Webpackbar = require("webpackbar")
@@ -25,9 +26,14 @@ const webpackBaseConfig = {
       },
       {
         test: /\.css$/,
+        include: [
+          resolve('./src/web/index.css'),
+          resolve('node_modules')
+        ],
         use: [
-          {loader: 'style-loader'},
-          {loader: "css-loader"}
+            MiniCssExtractPlugin.loader,
+            'css-loader',
+            'postcss-loader'
         ]
       }
     ]
@@ -40,6 +46,11 @@ const webpackBaseConfig = {
     },
     extensions: [".js", ".ts", ".tsx", "jsx"],
   },
-  plugins: [new Webpackbar()]
+  plugins: [
+    new Webpackbar(),
+    new MiniCssExtractPlugin({
+      filename: 'styles/[name].css',
+      chunkFilename: 'styles/[name].css',
+    })]
 }
 module.exports = merge.default(webpackBaseConfig, _mergeConfig)
