@@ -26,6 +26,15 @@
       "jest"
   ],
   "rules": {
-      "no-console": "off"
+      "no-console": "off",
+      "@typescript-eslint/no-non-null-assertion": "off",
+      "import/extensions": [
+        "error",
+        {
+          "ts": "never",
+          "tsx": "never",
+          "js": "never"
+        }
+      ]
   }
 }

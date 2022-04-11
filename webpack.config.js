@@ -12,7 +12,7 @@ const webpackBaseConfig = {
     type: "filesystem"
   },
   entry: {
-    main: resolve('src/web/index.tsx')
+    main: resolve('src/index.tsx')
   },
   module: {
     rules: [
@@ -25,10 +25,6 @@ const webpackBaseConfig = {
       },
       {
         test: /\.css$/,
-        include: [
-          resolve('./src/web/index.css'),
-          resolve('node_modules')
-        ],
         use: [
             MiniCssExtractPlugin.loader,
             'css-loader',
@@ -39,9 +35,7 @@ const webpackBaseConfig = {
   },
   resolve: {
     alias: {
-      "@components": resolve("src/web/components"),
-      "@atoms": resolve("src/web/atoms"),
-      "@selectors": resolve("src/web/selectors")
+      "@components": resolve("src/components")
     },
     extensions: [".js", ".ts", ".tsx", "jsx"],
   },

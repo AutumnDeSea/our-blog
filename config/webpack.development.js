@@ -29,7 +29,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'kk-react-generator',
       filename: 'index.html',
-      template: resolve(__dirname, '../src/web/index.dev.html'),
+      template: resolve(__dirname, '../src/index.dev.html'),
     }),
     new FriendlyErrorsWebpackPlugin({
       compilationSuccessInfo: {
