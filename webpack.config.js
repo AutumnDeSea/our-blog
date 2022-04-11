@@ -1,5 +1,4 @@
 // webpack4 和webpack5的性能优化区别
-
 const { resolve } =  require("path")
 const merge = require("webpack-merge")
 const argv = require("yargs-parser")(process.argv.slice(2))

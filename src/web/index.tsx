@@ -3,6 +3,7 @@
 
 import React from 'react';
 import ReactDOM from 'react-dom';
+import './index.css';
 // import Errorboundary from '@components/Lib/ErrorBoundary';
 // import PageErrorFallback from '@components/Lib/BeautifulError';
 import App from './pages/App';
