@@ -1,13 +1,14 @@
 import React from 'react';
+import AppRoutes from '@/routes';
 import { BrowserRouter as Router } from 'react-router-dom';
-import HeaderBar from '@components/headerBar/header';
-// import Routes from '@routes/index'
+
 const App = () => {
   return (
-    <Router>
-      <HeaderBar></HeaderBar>
-      <div className='text-red-900'>3r343</div>
-    </Router>
+    <>
+      <Router>
+        <AppRoutes/>
+      </Router>
+    </>
   );
 };
 export default App;

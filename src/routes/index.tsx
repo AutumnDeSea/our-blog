@@ -1,10 +1,10 @@
 import React from 'react';
 import { RouteObject, useRoutes } from 'react-router-dom';
-const Layout = () => import('@/layout');
-const HomePage = () => import('@/pages/HomePage');
-const AboutUsPage = () => import('@/pages/AboutUs');
-const NotFoundPage = () => import('@/pages/NotFound');
-
+import Layout from '@/layout';
+import HomePage from '@/pages/HomePage';
+import AboutUsPage from '@/pages/AboutUs';
+import NotFoundPage from '@/pages/NotFound';
+import TopArticlePage from '@/pages/TopArticle';
 const routes: RouteObject[] = [
   {
     path: '/', 
@@ -24,4 +24,11 @@ const routes: RouteObject[] = [
       },
     ],
   },
+  {
+    path: '/topArticle', 
+    element: <TopArticlePage />,
+  },
+  
 ];
+const AppRoutes = () => useRoutes(routes);
+export default AppRoutes;
