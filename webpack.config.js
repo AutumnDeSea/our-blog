@@ -35,6 +35,7 @@ const webpackBaseConfig = {
   },
   resolve: {
     alias: {
+      '@': resolve('./src'),
       "@components": resolve("src/components")
     },
     extensions: [".js", ".ts", ".tsx", "jsx"],
