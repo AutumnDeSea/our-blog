@@ -1,8 +1,12 @@
 import React from 'react';
+import { Button } from 'antd';
 const Header = () => {
   return (
     <>
-      <div>我是一个头部</div>
+      <div className='flex'>
+        <img src='../assets/images/logo.png'/>
+        <Button type="primary"  size="middle">Get Starting</Button>
+      </div>
     </>
   );
 };

@@ -28,9 +28,25 @@ const webpackBaseConfig = {
         use: [
             MiniCssExtractPlugin.loader,
             'css-loader',
-            'postcss-loader'
+            'postcss-loader',
         ]
-      }
+      },
+      {
+        test: /\.less$/,
+        use: [
+          'style-loader', 
+          'css-loader', 
+          {
+            loader: "less-loader",
+            options: {
+              lessOptions: {
+                modifyVars: { '@primary-color': 'red' },
+                javascriptEnabled: true,
+              },
+            },
+          }
+        ],
+      },
     ]
   },
   resolve: {
