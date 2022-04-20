@@ -4,7 +4,7 @@ import Layout from '@/layout';
 import HomePage from '@/pages/HomePage';
 import AboutUsPage from '@/pages/AboutUs';
 import NotFoundPage from '@/pages/NotFound';
-import TopArticlePage from '@/pages/TopArticle';
+import TopArticlePage from '@/pages/topArticle';
 const routes: RouteObject[] = [
   {
     path: '/', 
