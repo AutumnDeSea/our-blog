@@ -12,7 +12,7 @@ const webpackBaseConfig = {
     type: "filesystem"
   },
   entry: {
-    main: resolve('src/web/index.tsx')
+    main: resolve('src/index.tsx')
   },
   module: {
     rules: [
@@ -25,23 +25,34 @@ const webpackBaseConfig = {
       },
       {
         test: /\.css$/,
-        include: [
-          resolve('./src/web/index.css'),
-          resolve('node_modules')
-        ],
         use: [
             MiniCssExtractPlugin.loader,
             'css-loader',
-            'postcss-loader'
+            'postcss-loader',
         ]
-      }
+      },
+      {
+        test: /\.less$/,
+        use: [
+          'style-loader', 
+          'css-loader', 
+          {
+            loader: "less-loader",
+            options: {
+              lessOptions: {
+                modifyVars: { '@primary-color': 'red' },
+                javascriptEnabled: true,
+              },
+            },
+          }
+        ],
+      },
     ]
   },
   resolve: {
     alias: {
-      "@components": resolve("src/web/components"),
-      "@atoms": resolve("src/web/atoms"),
-      "@selectors": resolve("src/web/selectors")
+      '@': resolve('./src'),
+      "@components": resolve("src/components")
     },
     extensions: [".js", ".ts", ".tsx", "jsx"],
   },

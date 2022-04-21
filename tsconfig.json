@@ -1,40 +1,28 @@
 {
   "compilerOptions": {
+    "target": "esnext",
+    "lib": ["dom", "dom.iterable", "esnext", "webworker"],
+    "allowJs": true,
+    "skipLibCheck": true,
     "strict": true,
-    "jsx": "react",
-    "strictNullChecks": true,
-    "allowSyntheticDefaultImports": true,
-    "noImplicitThis": true,
     "noImplicitAny": true,
-    "incremental": true,
-    "outDir": "bulid/lib",
-    "target": "es5",
-    "module": "esnext",
-    "lib": ["dom", "esnext"],
-    "sourceMap": true,
-    "importHelpers": true,
-    "declaration": true,
-    "noUnusedLocals": true,
-    "noImplicitReturns": true,
-    "noFallthroughCasesInSwitch": true,
-    "allowJs": false,
-    "moduleResolution": "node",
+    "strictNullChecks": true,
     "forceConsistentCasingInFileNames": true,
+    "noEmit": true,
     "esModuleInterop": true,
-    "suppressExcessPropertyErrors": true,
-    "experimentalDecorators": true,
-    "rootDir": "",
-    "baseUrl": "src",
+    "module": "esnext",
+    "moduleResolution": "node",
+    "resolveJsonModule": true,
+    "isolatedModules": false,
+    "useDefineForClassFields": true,
+    "jsx": "preserve",
+    "baseUrl": "./",
     "paths": {
-      "@components/*": ["web/components/*"],
-      "@atoms/*": ["web/recoil/atoms/*"],
-      "@selectors": ["web/recoil/selectors/*"]
-    }
-
+      "@/*": ["src/*"],
+      "@components/*": ["src/components/*"],
+      "@mocks/*": ["mocks/*"]
+    },
   },
-  "include": [
-     "src",
-    "tests"
-  ],
-  "exclude": ["node_modules", "build", "scripts", "config", "**/*.js"],
+  "include": ["src", "libs", "tests", "mocks", "electron"],
+  "exclude": ["node_modules"]
 }

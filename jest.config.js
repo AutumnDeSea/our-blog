@@ -17,7 +17,7 @@ module.exports = {
     },
   //    A map from regular expressions to module names or to arrays of module names that allow to stub out resources with a single module
   moduleNameMapper: {
-    "^@components(.*)$": "<rootDir>/src/web/components$1",
+    "^@components(.*)$": "<rootDir>/src/components$1",
   },
   // An object that configures minimum threshold enforcement for coverage results
   coverageThreshold: {

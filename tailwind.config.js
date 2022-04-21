@@ -1,5 +1,5 @@
 module.exports = {
-  content: ['./src/web/**/*.tsx', './src/web/*.tsx'],
+  content: ['./src/**/*.tsx', './src/*.tsx'],
   theme: {
     colors: {
       "black": "rgba(25, 25, 25, 1)",
@@ -7,6 +7,7 @@ module.exports = {
       "gray": "rgb(117, 117, 117)",
       "white": "rgb(255, 255, 255,1)",
       "yellow": "#FFC017"
+      "gray": "rgb(117, 117, 117)"
     },
     extend: {},
   },
