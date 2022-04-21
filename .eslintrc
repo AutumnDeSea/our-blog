@@ -5,6 +5,7 @@
     "jest": true
 },
   "extends": [
+    "airbnb",
     "airbnb-typescript",
     "plugin:react-hooks/recommended",
     "plugin:@typescript-eslint/recommended",
@@ -26,15 +27,15 @@
       "jest"
   ],
   "rules": {
-      "no-console": "off",
-      "@typescript-eslint/no-non-null-assertion": "off",
-      "import/extensions": [
-        "error",
-        {
-          "ts": "never",
-          "tsx": "never",
-          "js": "never"
-        }
-      ]
+    "no-console": "off",
+    "@typescript-eslint/no-non-null-assertion": "off",
+    "import/extensions": [
+      "error",
+      {
+        "ts": "never",
+        "tsx": "never",
+        "js": "never"
+      }
+    ]
   }
 }
