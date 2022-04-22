@@ -6,10 +6,14 @@ module.exports = {
       "slim-black": "rgb(41, 41, 41)",
       "gray": "rgb(117, 117, 117)",
       "white": "rgb(255, 255, 255,1)",
-      "yellow": "#FFC017"
+      "yellow": "#FFC017",
       "gray": "rgb(117, 117, 117)"
     },
-    extend: {},
+    extend: {
+      spacing: {
+        '75':'75px' 
+      },
+    },
   },
   variants: {},
   plugins: [],
