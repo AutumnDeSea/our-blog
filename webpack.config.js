@@ -40,7 +40,7 @@ const webpackBaseConfig = {
             loader: "less-loader",
             options: {
               lessOptions: {
-                modifyVars: { '@primary-color': 'red' },
+                modifyVars: { '@primary-color': 'rgba(25, 25, 25, 1)' },
                 javascriptEnabled: true,
               },
             },

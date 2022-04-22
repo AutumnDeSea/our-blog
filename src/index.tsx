@@ -16,9 +16,7 @@ import './assets/css/app.less';
 //   </Errorboundary>
 //   , document.getElementById('main'));
 createRoot(document.querySelector('#main')!).render(
-    <ConfigProvider locale={zhCN}>
-        <App />
-    </ConfigProvider>,
+    <App />,
 );
 // 装了找不到模块，就是缺声明文件
 // ts的时候，一个文件必须对应一个描述文件
