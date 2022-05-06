@@ -1,6 +1,3 @@
-
-
-
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import './assets/css/index.css';
@@ -10,6 +7,11 @@ import { ConfigProvider } from 'antd';
 // import PageErrorFallback from '@components/Lib/BeautifulError';
 import App from './pages/App';
 import './assets/css/app.less';
+import works from '../mocks/browser';
+if (process.env.NODE_ENV === 'development') {
+  works.start();
+  
+}
 // ReactDOM.render(
 //   <Errorboundary fallbackRender={ PageErrorFallback }>
 //       <App/>

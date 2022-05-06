@@ -10,7 +10,7 @@ module.exports = {
       '/api': 'http://localhost:3000',
     },
     static: {
-      directory: join(__dirname, '../dist'),
+      directory: join(__dirname, '../public'),
     },
     hot: true,
     port: 3000,
@@ -29,7 +29,7 @@ module.exports = {
     new HtmlWebpackPlugin({
       title: 'kk-react-generator',
       filename: 'index.html',
-      template: resolve(__dirname, '../src/index.dev.html'),
+      template: resolve(__dirname, '../public/index.html'),
     }),
     new FriendlyErrorsWebpackPlugin({
       compilationSuccessInfo: {

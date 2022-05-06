@@ -1,5 +1,6 @@
 {
   "compilerOptions": {
+    "types": ["react/next", "react-dom/next"],
     "target": "esnext",
     "lib": ["dom", "dom.iterable", "esnext", "webworker"],
     "allowJs": true,
@@ -20,7 +21,9 @@
     "paths": {
       "@/*": ["src/*"],
       "@components/*": ["src/components/*"],
-      "@mocks/*": ["mocks/*"]
+      "@mocks/*": ["mocks/*"],
+      "@apis/*": ["src/apis/*"]
+
     },
   },
   "include": ["src", "libs", "tests", "mocks", "electron"],
