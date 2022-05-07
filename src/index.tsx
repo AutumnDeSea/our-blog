@@ -1,6 +1,3 @@
-
-
-
 import React from 'react';
 import { createRoot } from 'react-dom/client';
 import './assets/css/index.css';
@@ -10,15 +7,18 @@ import { ConfigProvider } from 'antd';
 // import PageErrorFallback from '@components/Lib/BeautifulError';
 import App from './pages/App';
 import './assets/css/app.less';
+import works from '../mocks/browser';
+if (process.env.NODE_ENV === 'development') {
+  works.start();
+  
+}
 // ReactDOM.render(
 //   <Errorboundary fallbackRender={ PageErrorFallback }>
 //       <App/>
 //   </Errorboundary>
 //   , document.getElementById('main'));
 createRoot(document.querySelector('#main')!).render(
-    <ConfigProvider locale={zhCN}>
-        <App />
-    </ConfigProvider>,
+    <App />,
 );
 // 装了找不到模块，就是缺声明文件
 // ts的时候，一个文件必须对应一个描述文件

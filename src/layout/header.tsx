@@ -2,7 +2,7 @@ import React from "react";
 import { Link } from "react-router-dom";
 const Header = () => {
   return (
-    <div className="bg-yellow fixed w-full top-0 left-0">
+    <div className="bg-yellow fixed w-full top-0 left-0 border-b border-black">
       <header className="flex justify-between  max-w-7xl mx-auto h-75">
         <div className="flex items-center space-x-5">
           <Link to="/home">
