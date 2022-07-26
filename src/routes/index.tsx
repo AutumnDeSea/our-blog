@@ -4,7 +4,9 @@ import Layout from '@/layout';
 import HomePage from '@/pages/HomePage';
 import AboutUsPage from '@/pages/AboutUs';
 import NotFoundPage from '@/pages/NotFound';
-import TopArticlePage from '@/pages/TopArticle';
+// import TopArticlePage from '@/pages/TopArticle';
+import VirtualizeListPage from '@/pages/virtualizeList';
+
 const routes: RouteObject[] = [
   {
     path: '/', 
@@ -24,9 +26,13 @@ const routes: RouteObject[] = [
       },
     ],
   },
+  // {
+  //   path: '/topArticle', 
+  //   element: <TopArticlePage />,
+  // },
   {
-    path: '/topArticle', 
-    element: <TopArticlePage />,
+    path: '/virtualizeList', 
+    element: <VirtualizeListPage />,
   },
   
 ];
