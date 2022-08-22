@@ -6,6 +6,8 @@ import AboutUsPage from '@/pages/AboutUs';
 import NotFoundPage from '@/pages/NotFound';
 // import TopArticlePage from '@/pages/TopArticle';
 import VirtualizeListPage from '@/pages/virtualizeList';
+import TestPage from '@/pages/Test/index';
+
 
 const routes: RouteObject[] = [
   {
@@ -34,6 +36,10 @@ const routes: RouteObject[] = [
     path: '/virtualizeList', 
     element: <VirtualizeListPage />,
   },
+  {
+    path: '/test', 
+    element: <TestPage />,
+  }
   
 ];
 const AppRoutes = () => useRoutes(routes);

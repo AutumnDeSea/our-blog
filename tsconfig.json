@@ -26,6 +26,6 @@
 
     },
   },
-  "include": ["src", "libs", "tests", "mocks", "electron"],
+  "include": ["src", "libs", "tests", "mocks", "electron", "src/**/*.ts", "src/*.ts"],
   "exclude": ["node_modules"]
 }
